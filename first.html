@@ -1,0 +1,219 @@
+<html>
+  <head><title>Computer Science and IT Department YMN</title>
+    <link rel="stylesheet" href="css/first.css">
+    <link rel="icon" href="ymn.png">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  </head>
+  <body>
+    <div id="section1">
+      <div class="navfix">
+  <nav id="navbar">
+      <div class="logo">
+          <img src="image/ymnlogo.png">
+          <h2>YMN</h2>
+           <p>Computer science & IT Department</p>
+      </div>
+      <div class="navs">
+        <a href="https://www.ymnnanded.in/Dep_csit.html">Home</a>
+           
+      </div>
+  </nav>
+  <div class="notice">
+    
+<marquee><span class="blink_me">NOTICE :-</span> This Project Developed By Shailesh Mane</marquee>
+  </div>
+ 
+ </div>
+<div class="heading">
+   
+ 
+     <h1>Computer Science &<br> Information Technology <br>Department</h1>
+     <p> Yeshwant Mahavidyalay , Nanded.  <BR>
+         
+    </p>
+      <div class="btn">
+          <a href="#section2"> Explore</a> 
+      </div>
+      <span class="change_content"> </span>
+        
+      </div>
+       <div class="col1">
+        
+        
+             
+</div>
+<div circle>
+</div>
+  <div class="img">
+     
+  </div>
+</div>
+<div class="me"> 
+      <p>Developed by:<br>
+                    - Shailesh_Mane :)</p>
+        </div>     
+
+ <div id="section2">
+  <div class="lab1">
+      <h1>Welcome to The  Department Of Computer Science & <br>Information Technology...</h1>
+      <p> The Department Of Computer Science & IT<br></p>
+          
+
+
+  </div>
+   <div class="col">
+         
+<br>
+       <a href="course.html"> 
+       <div class="card card4">
+          <h1>Courses</h1>
+            <p><br>Available Courses</p> <br>
+            
+            <img id="img2" src="image/img2.png">
+       </div></a>
+
+       <a href="induction.html"> 
+       <div class="card card4">
+          <h1>Induction <br>Program</h1>
+            <p><br>Take a look of Online<br>Induction Program</p>
+            <img id="img2" src="image/img3.png">
+       </div></a>
+
+       <a href="faculty.html"> 
+       <div class="card card4">
+          <h1>Faculty <br> Profile</h1>
+            <p><br>The Faculties of<br>Department</p>
+            <img id="img2" src="image/img6.png">
+       </div></a>
+
+       <a href="D:\Cs Department\aboutdept.html"> 
+       <div class="card card4">
+
+          <h1>About <br>Department</h1>
+            <p><br>About Department</p>
+            <img id="img2" src="image/img9.png">
+       </div></a>
+<a href="library.html">
+       <div class="card card1">
+             <h1>Department<br>Library</h1>
+            <p>Here is Departmental <br>Library  </p>
+            <img id="img4" src="image/img1.png">
+       </div></a>
+       <a href="addon.html"> 
+       <div class="card card2">
+          <h1>Add-On <br> Courses</h1>
+            <p>Gain The Extra Knowledge With <br>Add On Courses</p>
+            <img id="img3" src="image/img5.png">
+       </div></a>
+        <a href="achieve.html"> 
+       <div class="card card3">
+        <i class="fa-thin fa-books"></i>
+          <h1>Achievement</h1>
+            <p>The Idols o f success<br> </p> 
+            <img id="img1" src="image/img4.png">
+       </div></a>
+
+     
+       <a href="Event.html"> 
+       <div class="card card4">
+          <h1>Events</h1>
+            <p><br>the Events</p>
+            <img id="img6" src="image/img7.png">
+       </div></a>
+
+      
+       
+ </div>
+  <div class="lab2">
+         <p><br>
+              </p>
+       </div>
+
+
+
+<div id="section3">
+  <h1> Photo Gallery Of Department of Computer Science &<br>Information Technolgoy</h1>
+  
+<div class="sliders">
+     <div class="slide-container">
+      <div class="slide fade">
+        <img src='image/image7.jpeg' alt=''>
+      </div>
+      <div class="slide fade">
+        <img src='image/image2.jpeg' alt=''>
+      </div>
+      <div class="slide fade">
+        <img src='image/image3.jpeg' alt=''>
+      </div>
+      <div class="slide fade">
+        <img src='image/image4.jpeg' alt='Not Available'>
+      </div>
+
+      <a href="#" class="prev" title="Previous">&#10094</a>
+      <a href="#" class="next" title="Next">&#10095</a>
+    </div>
+    <div class="dots-container">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+
+    </div>
+
+</div>
+
+
+<script>
+  
+  let currentSlide = 0;
+const slides = document.querySelectorAll(".slide")
+const dots = document.querySelectorAll('.dot')
+
+const init = (n) => {
+  slides.forEach((slide, index) => {
+    slide.style.display = "none"
+    dots.forEach((dot, index) => {
+      dot.classList.remove("active")
+    })
+  })
+  slides[n].style.display = "block"
+  dots[n].classList.add("active")
+}
+document.addEventListener("DOMContentLoaded", init(currentSlide))
+const next = () => {
+  currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+  init(currentSlide)
+}
+
+const prev = () => {
+  currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+  init(currentSlide)
+}
+
+document.querySelector(".next").addEventListener('click', next)
+
+document.querySelector(".prev").addEventListener('click', prev)
+
+
+setInterval(() => {
+  next()
+}, 5000);
+
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    console.log(currentSlide)
+    init(i)
+    currentSlide = i
+  })
+})
+
+
+</script>
+
+
+
+<script src="https://kit.fontawesome.com/e63aaa0e08.js" crossorigin="anonymous"></script>
+  </body>
+</html>
